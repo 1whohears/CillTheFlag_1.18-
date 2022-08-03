@@ -1,0 +1,3 @@
+#show setup prompt
+
+tellraw @s ["",{"text":"You are about to start a game of Cill the Flag. You pick what settings you want for this game. ","color":"yellow"},{"text":"WARNING: If you continue, you will reset any cill the flag game that is currently in progress! ","bold":true,"color":"dark_red"},{"text":"Click to Begin CTF Setup Process","bold":true,"underlined":true,"color":"gold","clickEvent":{"action":"run_command","value":"/function cf:setup/initoptions"}}]
