@@ -20,8 +20,8 @@ scoreboard players operation Members displayBlue = blue teamSize
 scoreboard players operation Members displayGreen = green teamSize
 scoreboard players operation Members displayYellow = yellow teamSize
 
-scoreboard players operation Red display = blue teamSize
-scoreboard players operation Blue display = red teamSize
+scoreboard players operation Red display = red teamSize
+scoreboard players operation Blue display = blue teamSize
 scoreboard players operation Green display = green teamSize
 scoreboard players operation Yellow display = yellow teamSize
 
