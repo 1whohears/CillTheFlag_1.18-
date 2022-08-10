@@ -22,6 +22,13 @@ tag @a[team=yellow] add player
 #put players back in survival
 gamemode survival @a[tag=player]
 
+#new world mode stuff
+execute if score data newWorldMode matches 1 run gamerule doDaylightCycle true
+execute if score data newWorldMode matches 1 run time set 0
+execute if score data newWorldMode matches 1 run clear @a[tag=player]
+execute if score data newWorldMode matches 1 run scoreboard players set @a[tag=player] totalDeaths 0
+gamerule keepInventory true
+
 #other scoreboard setup
 execute at @a[tag=player] run scoreboard players operation @p initDeaths = @p totalDeaths
 scoreboard players set @a[tag=player] currentDeaths 0
@@ -38,12 +45,6 @@ execute at @e[tag=center,limit=1] run worldborder center ~ ~
 worldborder damage amount 1
 worldborder damage buffer 2
 worldborder warning distance 1
-
-#new world mode stuff
-execute if score data newWorldMode matches 1 run gamerule doDaylightCycle true
-execute if score data newWorldMode matches 1 run time set 0
-execute if score data newWorldMode matches 1 run clear @a[tag=player]
-gamerule keepInventory true
 
 #tp players
 tp @a[tag=player,nbt={Dimension:"minecraft:the_nether"}] @e[tag=center,limit=1]
