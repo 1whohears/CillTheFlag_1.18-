@@ -1,4 +1,4 @@
-#init phase 0
+# init phase 0
 
 scoreboard players set data phase 0
 
